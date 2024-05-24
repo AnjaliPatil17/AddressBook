@@ -4,7 +4,7 @@ public class Main {
     public static boolean exit = true;
 
     public static void options() {
-        System.out.println("(1) Create New Contact\n(2) Edit Contact\n(3) Display\n(4) Exit");
+        System.out.println("(1) Create New Contact\n(2) Edit Contact\n(3) Delete Contact\n(4) Display\n(5) Exit");
         Scanner sc = new Scanner(System.in);
         Contact obj = new Contact();
         int option = sc.nextInt();
@@ -17,9 +17,12 @@ public class Main {
                 obj.updateContact();
                 break;
             case 3:
-                System.out.println(obj.getInfo());
+                obj.deleteInfo();
                 break;
             case 4:
+                System.out.println(obj.getInfo());
+                break;
+            case 5:
                 exit = false;
                 break;
             default:
